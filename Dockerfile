@@ -11,12 +11,12 @@ USER tgproxy
 WORKDIR /home/tgproxy/
 
 COPY --chown=tgproxy mtprotoproxy.py config.py /home/tgproxy/
-COPY --chown=tgproxy mtprotoproxy.py start.sh /home/tgproxy/
-COPY --chown=tgproxy mtprotoproxy.py  mtprotoproxy/ /home/tgproxy/
+#COPY --chown=tgproxy mtprotoproxy.py start.sh /home/tgproxy/
+#COPY --chown=tgproxy mtprotoproxy.py  mtprotoproxy/ /home/tgproxy/
 
-RUN chmod +x /home/tgproxy/start.sh
-RUN chmod 777 /home/tgproxy/mtprotoproxy/
+#RUN chmod +x /home/tgproxy/start.sh
+#RUN chmod 777 /home/tgproxy/mtprotoproxy/
 
 EXPOSE 8443
 
-CMD ./start.sh
+CMD ["python3", "mtprotoproxy.py"]
