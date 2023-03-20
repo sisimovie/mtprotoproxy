@@ -15,7 +15,7 @@ COPY --chown=tgproxy mtprotoproxy.py start.sh /home/tgproxy/
 COPY --chown=tgproxy mtprotoproxy.py  mtprotoproxy/ /home/tgproxy/
 
 RUN chmod +x /home/tgproxy/start.sh
-RUN chmod +x+w+r /home/tgproxy/mtprotoproxy
+RUN chmod 777 /home/tgproxy/mtprotoproxy/
 
 EXPOSE 8443
 
