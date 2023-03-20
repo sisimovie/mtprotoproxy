@@ -11,7 +11,7 @@ USER tgproxy
 WORKDIR /home/tgproxy/
 
 COPY --chown=tgproxy mtprotoproxy.py config.py /home/tgproxy/
-COPY --chown=tgproxy mtprotoproxy.py start.sh /home/tgproxy/
+COPY --chown=777 mtprotoproxy.py start.sh /home/tgproxy/
 
 EXPOSE 8443
 
