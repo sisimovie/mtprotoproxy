@@ -13,4 +13,4 @@ COPY --chown=tgproxy mtprotoproxy.py config.py /home/tgproxy/
 
 EXPOSE 8443
 
-CMD start.sh
+CMD /home/tgproxy/start.sh
