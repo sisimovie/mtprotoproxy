@@ -17,6 +17,6 @@ COPY --chown=tgproxy mtprotoproxy.py config.py /home/tgproxy/
 #RUN chmod +x /home/tgproxy/start.sh
 #RUN chmod 777 /home/tgproxy/mtprotoproxy/
 
-EXPOSE 8889/tcp 8889/udp
+EXPOSE 443/tcp 443/udp
 
 CMD ["python3", "mtprotoproxy.py"]
